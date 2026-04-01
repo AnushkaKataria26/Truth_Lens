@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #020817;
+  --color-foreground: #F1F5F9;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-heading: var(--font-sora), var(--font-sans);
+  
+  --color-primary: #3B82F6;
+  --color-secondary: #6366F1;
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #64748B;
+  
+  --color-risk-high: #EF4444;
+  --color-risk-medium: #F97316;
+  --color-risk-authentic: #22C55E;
+  
+  --color-glass-surface: rgba(255, 255, 255, 0.04);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+
+  --animate-pulse-slow: orb-pulse 8s ease-in-out infinite alternate;
+  --animate-pulse-slow-reverse: orb-pulse 8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes orb-pulse {
+  0%   { transform: scale(1);    opacity: 0.7; }
+  100% { transform: scale(1.15); opacity: 1;   }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes count-up {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    @apply font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: var(--color-glass-surface);
+    border: 1px solid var(--color-glass-border);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .glass-card:hover {
+    box-shadow: 0 8px 40px rgba(59, 130, 246, 0.18), 0 0 0 1px rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.2);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 0 40px rgba(59, 130, 246, 0.15);
+  }
+
+  .glow-blue:hover {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.25);
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .orb-1 {
+    animation: orb-pulse 8s ease-in-out infinite alternate;
+  }
+  .orb-2 {
+    animation: orb-pulse 8s ease-in-out infinite alternate-reverse;
+  }
+}
