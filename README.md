@@ -498,31 +498,6 @@ Not all of these evaluation objectives are complete today.
 
 ---
 
-
-## Screenshots
-
-> Screenshots from the current prototype will be added as the interface and end-to-end workflow are stabilized.
-
-<!--
-Add real screenshots only.
-
-Example:
-
-### Analysis Interface
-
-![TruthLens Analysis Interface](docs/screenshots/analysis-interface.png)
-
-### Detection Results
-
-![TruthLens Detection Results](docs/screenshots/detection-results.png)
-
-### Benchmark Dashboard
-
-![TruthLens Benchmark Dashboard](docs/screenshots/benchmark-dashboard.png)
--->
-
----
-
 ## Installation
 
 ### Prerequisites
