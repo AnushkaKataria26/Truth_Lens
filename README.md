@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TruthLens
 
-## Getting Started
+> A research-oriented multimodal AI prototype exploring misinformation and manipulated-media analysis across visual, textual, and temporal signals.
 
-First, run the development server:
+## Project Status
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Early research prototype — under active development**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+TruthLens is an ongoing project, not a finished production system.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The current prototype explores how multiple machine-learning components can be combined for misinformation and manipulated-media analysis rather than relying on a single binary classifier. The repository currently contains frontend application code, Python backend services, model-training infrastructure, evaluation utilities, and a dedicated benchmarking suite.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A significant amount of work is still required around model validation, multimodal fusion, uncertainty, evidence quality, robustness, generalization, and explainability.
 
-## Learn More
+I am actively researching these problems and iterating on the system. My longer-term goal is to investigate whether this work can develop into a rigorous research contribution and, if the empirical results justify it, a research paper.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Why TruthLens?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Misinformation is increasingly multimodal.
 
-## Deploy on Vercel
+A misleading piece of content may involve:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- an AI-generated or manipulated image,
+- a deepfake video,
+- an authentic image presented with a false caption,
+- misleading textual claims,
+- manipulated temporal patterns,
+- conflicting signals across modalities,
+- or a combination of these.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This makes the problem difficult to reduce to a single:
+
+```text
+REAL / FAKE
